@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Academic</title>
+    <link>/authors/</link>
+    <description>Recent content in Authors on Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chengliang Zhang</title>
+      <link>/authors/chengliang-zhang/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/chengliang-zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Feng Yan</title>
+      <link>/authors/feng-yan/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/feng-yan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Minchen Yu</title>
+      <link>/authors/minchen-yu/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/minchen-yu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wei Wang</title>
+      <link>/authors/wei-wang/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/wei-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;Chengliang is currently a 3rd-year Ph.D. candidate in HKUST. He is the recipient of the Hong Kong Ph.D. Fellowship Award (2016 – present).&lt;/p&gt;
+
+&lt;p&gt;His research interests cover the broad area of distributed systems, with a focus on big data and machine learning systems as well as cloud computing. He enjoys identifying fundamenal system design and performance issues in large-scale cloud systems and searching for general and efficient solutions.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

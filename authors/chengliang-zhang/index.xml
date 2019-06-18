@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chengliang Zhang on Academic</title>
+    <link>/authors/chengliang-zhang/</link>
+    <description>Recent content in Chengliang Zhang on Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/authors/chengliang-zhang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MArk: Exploiting Cloud Services for Cost-Effective, SLO-Aware Machine Learning Inference Serving</title>
+      <link>/publication/mark/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/mark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning</title>
+      <link>/publication/spec-sync/</link>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/spec-sync/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
