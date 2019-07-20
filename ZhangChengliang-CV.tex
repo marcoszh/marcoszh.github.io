@@ -1,0 +1,489 @@
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV flate %%%%%%%%%%%%%%%%%%%%%%%%
+
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %% 
+%% LaTeX to get the ``??'' replaced with the number of the last page  %% 
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[12pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{graphicx, amssymb, amsbsy, amsmath, MnSymbol}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% \usepackage{MinionPro}
+\usepackage[normalem]{ulem}
+\usepackage{tabularx}
+
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+%\usepackage[paper=letterpaper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=1.2in,     % Length of section titles
+%            marginparsep=.05in,       % Space between titles and text
+%            margin=1in,               % 1 inch margins
+%            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=30.5mm,    % Length of section titles
+            marginparsep=1.5mm,       % Space between titles and text
+            margin=15mm,              % 25mm margins
+            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactenum will be nice.
+\usepackage{paralist}
+\usepackage{tabto}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\textbullet]%
+        {\begin{enumerate}[#1]}{\end{enumerate}%
+         \vspace{-6mm}}%\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\textbullet]%
+        {\begin{compactenum}[#1]}{\end{compactenum}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{{\huge \textbf{Marc Chengliang Zhang}}}
+
+\section{Present Position}
+%
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table 
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{2.4in}%
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+	 Ph.D Candidate & \emph{Office}: Room CYT 3007 \\
+     Dept. of Computer Science \& Engineering & \emph{Phone}:  +852--6216--2287\\
+	 Hong Kong University of Science and Technology  & \emph{Email}: \href{mailto: czhangbn@cse.ust.hk}{czhangbn@cse.ust.hk} \\
+     Clear Water Bay, Hong Kong  &  \emph{Web}: \href{https://marcoszh.github.io/}{https://marcoszh.github.io/} \\
+\end{tabular}
+
+% \section{Personal Information}
+% \newlength{\shortcollength}\setlength{\shortcollength}{4.5in}%
+% %
+% \begin{tabular}[t]{@{}p{\textwidth-\shortcollength}p{\shortcollength}}
+%      \emph{Citizenship} & Chinese \\
+%      \emph{Permanent Residency} &  Canadian
+% \end{tabular}
+
+\section{Research Interests}
+My interests cover \textbf{big data analytics systems} and \textbf{cloud computing}, with a special focus on \textbf{machine learning systems}. I enjoy identifying fundamental system design and performance issues in large-scale ML systems for both training and inference, and searching for general and efficient solutions.
+
+\section{Education}
+\textbf{Hong Kong University of Science and Technology}, Hong Kong SAR\\
+{\em Department of Computer Science and Engineering}\\[0.4em]
+        \mbox{}$\diamondsuit$ \textbf{Ph.D.} Computer Science and Engineering \hfill September 2016 - present\\
+        \mbox{}\hspace{6mm}\hspace{6mm}$\diamondsuit$ \emph{Supervisor:} \href{https://www.cse.ust.hk/~weiwa/}{Wei Wang}\\
+        \mbox{}\hspace{6mm}\hspace{6mm}$\diamondsuit$ \href{https://cerg1.ugc.edu.hk/hkpfs/index.html}{Hong Kong PhD Fellowship} recipient: prestigious and highly selective fellowship\\[-0.4em]
+
+\textbf{Harbin Institute of Technology}, Harbin, China\\
+{\em School of Computer Science and Technology}\\[0.4em]
+        \mbox{}$\diamondsuit$ \textbf{B.Eng.} Software Engineering \hfill September 2012 - June 2016\\
+        \mbox{}\hspace{6mm}\hspace{6mm}$\diamondsuit$ \emph{Honors:} National Scholarship (Top 2\%), People's Scholarship, Fuji Xerox Scholarship
+
+% % \vspace{-.2in}
+% \section{Professional Experience}
+% \textbf{Hong Kong University of Science and Technology}, Clear Water Bay, Kowloon, Hong Kong\\
+% Department of Computer Science and Engineering\\[-0.6em]
+
+% \emph{Assistant Professor (tenure-track)} \hfill September 2015 -- Present\\
+
+% \textbf{University of Toronto}, Toronto, Ontario, Canada\\
+% Department of Electrical and Computer Engineering\\[-0.6em]
+
+% \emph{Research/Teaching Assistant} \hfill September 2010 -- August 2015\\
+
+% \textbf{Microsoft Server and Tools Business}, Shanghai, China\\[-0.6em]
+
+% \emph{Software Development Engineer (intern)}\\
+% \mbox{}\hspace{6mm}$\diamondsuit$ Placement and routing algorithms for Microsoft WorkFlow 4.0  \hfill March -- June, 2010\\
+% \mbox{}\hspace{6mm}$\diamondsuit$ Cloud identity service development for Microsoft BizTalk  \hfill June -- September, 2008\\
+
+% \textbf{Microsoft Research Asia}, Beijing, China\\[-0.6em]
+
+% \emph{Research Assistant} \hfill March -- June 2007
+
+\section{Publications}
+
+\uline{Chengliang Zhang}, {Minchen Yu}, {Wei Wang}, Feng Yan, ``\href{https://marcoszh.github.io/publication/mark/}{MArk: Exploiting Cloud Services for Cost-Effective, SLO-Aware Machine Learning Inference Serving},'' in the {\em Proceedings of USENIX Annual Technical Conference (ATC'19)}, Renton, WA, July 2018 (20\% acceptance rate).\\
+
+
+\uline{Chengliang Zhang}, {Huangshi Tian}, {Wei Wang}, Feng Yan, ``\href{https://marcoszh.github.io/publication/spec-sync/}{Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning},'' in the {\em Proceedings of IEEE International Conference on Distributed Computing Systems (ICDCS'18)}, Vienna, Austria, July 2018 (20\% acceptance rate).\\
+
+\textbf{Preprints}\\
+
+\uline{Chengliang Zhang}, {Minchen Yu}, {Wei Wang}, Feng Yan, ``Towards Cost-Effective and SLO-Aware Machine Learning Inference Serving on Public Cloud,'' to be submitted to {\em IEEE Transactions on Parallel and Distributed Systems}.\\
+
+{Yinghao Yu}, \uline{Chengliang Zhang}, {Wei Wang}, {Jun Zhang}, {Khaled Letaief}, ``Towards Dependency-Aware Cache Management for Data Analytics Applications,'' submitted to {\em IEEE Transactions on Cloud Computing}, currently under review.
+
+\section{Research Experience}
+\textbf{Fast Secure Federated Learning System}
+\vspace{2pt}
+\begin{compactenum}[-]
+\item Inter-enterprise federated learning with Homomorphic Encryption
+\item Accelerate training and inference of Secure Federated Learning
+\item Mitigate encryption and communication overhead
+\end{compactenum}
+\vspace{5pt}
+
+% I am currently working on accelerating the training and inference process of secure federated learning. We partner with a large commercial bank, and focus on enabling inter-enterprise federated learning with the help of Homomorphic Encryption. Specifically, I am working on how to mitigate the encryption and communication overhead. \\[-0.4em]
+
+\textbf{MArk: ML Serving on Public Cloud}
+\vspace{2pt}
+\begin{compactenum}[-]
+\item Serve machine learning inference on public cloud
+\item Cost-effective and SLO-aware
+\item Characterization of ML serving and its performance cloud services
+\item Combine FaaS and IaaS to reduce over-provisioning
+\item Characterization of hardware accelerators like GPU and TPU
+\end{compactenum}
+\vspace{5pt}
+% We aspired to serve machine learning models on public cloud with both SLO compliance and cost-effectiveness. We first characterized ML serving and its performance on diverse cloud services, and then designed MArk based on our insights. MArk uses predictive autoscaling to maintain high utilization, and eliminates over-provisioning by utilizing flexible, yet expensive FaaS. MArk further brings down the cost by adopting ML accelerators judiciously. \\[-0.4em]
+
+\textbf{Speculative Synchronization}
+\vspace{2pt}
+\begin{compactenum}[-]
+\item Distributed data parallel training
+\item Relaxed consistency can increase throughput but hurt update quality
+\item Re-synchronize if the parameter copy is too stale to produce beneficial updates
+\end{compactenum}
+% \vspace{5pt}
+% Asynchronous parallel can improve distributed ML training's throughput. However, the introduced inconsistency leads to low quality updates. We proposed Speculative Synchronization to exploit the trade-off between training throughput and update quality, which allows a worker to abort the current computation and synchronize, if it is confident that the benefits of fresher parameter outweight the loss of completed computation.
+
+
+% \section{Teaching Experience}
+% Hong Kong University of Science and Technology
+% \vspace{2mm}
+% \begin{innerlist}\itemsep0.25em
+%     \item[$\diamondsuit$] COMP3511: \emph{Operating System} \hfill Spring, 2018, 2019
+%     \item[$\diamondsuit$] COMP4651: \emph{Cloud Computing and Big Data Systems} \hfill Spring \& Fall, 2017
+%     \item[$\diamondsuit$] COMP4621: \emph{Computer Communication Networks I} \hfill Summer 2016
+%     \item[$\diamondsuit$] COMP6611B: \emph{Topics on Cloud Computing and Data Analytics Systems} \hfill Fall 2015, 2016
+% \end{innerlist}
+
+% \vspace{4mm}
+% % \vspace{-8mm}
+% University of Toronto (Teaching Assistant)
+% \vspace{2mm}
+% \begin{innerlist}\itemsep0.25em
+% \item[$\diamondsuit$] APS105 \emph{Computer Fundamentals} \hfill Fall 2010 -- 2014
+% \item[$\diamondsuit$] ECE 344S \emph{Operating Systems} \hfill Spring 2011, 2012
+% \item[$\diamondsuit$] ECE297 \emph{Communication and Design} \hfill Spring 2013, 2014
+% \end{innerlist}
+
+% \section{Advising and Supervisorship}
+% \textbf{Current Students in the Doctor of Philosophy Program}\\[-1em]
+
+% \newlength{\shortcollength}\setlength{\shortcollength}{1.85in}%
+% \begin{tabular}[t]{@{}p{\textwidth-\shortcollength}p{\shortcollength}}
+%     \emph{Name} & \emph{Duration of Study}\\
+%     Minchen Yu & 2018 -- Present\\
+%     Huangshi Tian & 2017 -- Present\\
+%     Qizhen Weng & 2017 -- Present\\
+%     Mingzhe Li (HKUST-SUSTech Joint PhD Program) & 2016 -- Present\\
+%     Da Yan & 2016 -- Present\\
+%     Chengliang Zhang & 2016 -- Present\\
+%     Yinghao Yu (Co-supervised with Prof. Khaled B. Letaief) & 2015 -- Present\\
+% \end{tabular}
+% \vspace{4mm}
+
+% % \newpage
+% \textbf{Students Graduated with the Doctor of Philosophy Degree}\\
+% \begin{tabular}[t]{@{}p{1.0in}p{2in}p{\textwidth-3.4in}}
+%     \emph{Name} & \emph{Starting Date, Graduation Date and First Employment} &
+%     \emph{Dissertation Title} \\
+%     Chen Chen & 2014 -- 2018, Research Scientist at Huawei Research Lab, Hong Kong & Job Scheduling in the Cloud: A Tale on Fairness and Efficiency\\
+% \end{tabular}
+% \vspace{4mm}
+
+% \textbf{Students Graduated with the Master of Philosophy Program}\\
+% \begin{tabular}[t]{@{}p{1.0in}p{2in}p{\textwidth-3.4in}}
+%     \emph{Name} & \emph{Starting Date, Graduation Date and First Employment} &
+%     \emph{Dissertation Title} \\
+%     Xiandong Qi & 2016 -- 2019, Software Engineer at AQUMON, Hong Kong. & Multi-Resource Fair Sharing with Constraints in Heterogeneous Clusters\\
+% \end{tabular}
+% \vspace{4mm}
+
+
+% \vspace{4mm}
+% \textbf{Student Supervision Achievements}\\[-0.6em]
+
+% \emph{Hong Kong PhD Fellowship Scheme} (3-year fellowship for top PhD students in Hong Kong)\\[-0.7em]
+
+% \begin{tabular}[t]{@{}p{\textwidth-\shortcollength}p{\shortcollength}}
+%     \emph{Name of Awardee} & \emph{Duration of Fellowship}\\
+%     Huangshi Tian & 2017 -- 2020\\
+%     Qizhen Weng & 2017 -- 2020\\
+%     Chengliang Zhang & 2016 -- 2019\\
+%     Yinghao Yu & 2015 -- 2018
+% \end{tabular}
+% \vspace{4mm}
+
+% \emph{Huawei PhD Fellowship Scheme} (4-year PhD fellowship for elite students sponsored by Huawei)\\[-0.7em]
+
+% \begin{tabular}[t]{@{}p{\textwidth-\shortcollength}p{\shortcollength}}
+%     \emph{Name of Awardee} & \emph{Duration of Fellowship}\\
+%     Minchen Yu & 2018 -- 2022
+% \end{tabular}
+% \vspace{4mm}
+
+
+% \emph{IEEE INFOCOM'17 Best-In-Session Presentation Award} \hfill May 2017 \\[-0.7em]
+
+% \begin{innerlist}\itemsep0.25em
+%   \item [$\diamondsuit$] Chen Chen, for his talk entitled ``Cluster Fair Queueing: Speeding up Data-Parallel Jobs with Delay Guarantees,'' in Conference Session \emph{Cloud Computing I}.
+
+%   \item [$\diamondsuit$] Yinghao Yu, for his talk entitled ``LRC: Dependency-Aware Cache Management for Data Analytics Clusters,'' in Conference Session \emph{Big Data Processing}.
+% \end{innerlist}
+
+% \vspace{4mm}
+% \textbf{Ph.D. Thesis Committees Served}\\[-0.7em]
+
+% Ming Wen, 2019\\
+% Li Chen, 2018\\
+% Jingjie Jiang, Wei Bai, Yi Zhang, 2017\\
+% Zhehui Wang, Zhice Yang, 2016
+
+% \section{Professional Services}
+% \textbf{Editorial Board}
+% \vspace{2mm}
+% \begin{innerlist}\itemsep0.25em
+%     \item [$\diamondsuit$] Editor, China Communications \hfill 2017 -- Present
+% \end{innerlist}
+% \vspace{4mm}
+
+% \textbf{Conference Organization}
+% \vspace{2mm}
+% \begin{innerlist}\itemsep0.25em
+%     \item[$\diamondsuit$] Finance Chair, the 1st ACM Asia-Pacific Workshop on Networking (APNet 2017)
+%     \item[$\diamondsuit$] Finance Chair, the 25th IEEE International Conference on Network Protocols (ICNP 2017)
+%     \item[$\diamondsuit$] Student Travel Grant Chair, the 7th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys 2016)
+%     \item[$\diamondsuit$] Student organizer, IEEE INFOCOM 2014
+%     \item[$\diamondsuit$] Student organizer, IEEE INFOCOM 2014 TPC Meeting
+%     \item[$\diamondsuit$] Student organizer, the 21st IEEE/ACM International Symposium on Quality of Service (IWQoS 2013)
+%     \item[$\diamondsuit$] Student organizer, the 22nd ACM Workshop on Network and Operating Systems Support for Digital Audio and Video (NOSSDAV 2012) 
+% \end{innerlist}
+% \vspace{4mm}
+
+% \textbf{Technical Program Committee}
+% \vspace{2mm}
+% \begin{innerlist}\itemsep0.25em
+%     \item[$\diamondsuit$] IEEE INFOCOM 2020
+%     \item[$\diamondsuit$] IEEE GLOBECOM 2019: Next-Generation Networking and Internet
+%     \item[$\diamondsuit$] The 39th IEEE International Conference on Distributed Computing Systems (ICDCS 2019)
+%     \item[$\diamondsuit$] IEEE INFOCOM 2019
+%     \item[$\diamondsuit$] The 26th IEEE International Conference on Network Protocols (ICNP 2018)
+%     \item[$\diamondsuit$] The 28th ACM SIGMM Workshop on Network and Operating Systems Support for Digital Audio and Video (NOSSDAV 2018)
+%     \item[$\diamondsuit$] IEEE GLOBECOM 2018: Big Data Track
+%     \item[$\diamondsuit$] IEEE INFOCOM 2018
+%     \item[$\diamondsuit$] IEEE ICNP 2017 Workshop on Machine Learning and Artificial Intelligence in Computer Networks (ML\&AI @ Network 2017)
+%     \item[$\diamondsuit$] The 25th IEEE International Conference on Network Protocols (ICNP 2017) 
+%     \item[$\diamondsuit$] IEEE GLOBECOM 2017: Next-Generation Networking and Internet Symposium
+%     \item[$\diamondsuit$] The 27th ACM SIGMM Workshop on Network and Operating Systems Support for Digital Audio and Video (NOSSDAV 2017)
+%     \item[$\diamondsuit$] The 26th International Conference on Computer Communication and Networks (ICCCN 2017)
+%     \item[$\diamondsuit$] IEEE International Conference on Cloud Engineering (IC2E) 2017
+%     \item[$\diamondsuit$] IEEE ICNP Workshop on Machine Learning in Computer Networks (NetworkML) 2016
+%     \item[$\diamondsuit$] The 25th International Conference on Computer Communication and Networks (ICCCN 2016), Hot Topics in Networking Track (HOT)
+%     \item[$\diamondsuit$] IEEE GLOBECOM 2015: Communications Software Services and Multimedia Applications (CSSMA) Symposium
+% \end{innerlist}
+
+% \vspace{4mm}
+
+% \textbf{Reviewer for Journal Manuscript Submissions}
+% \vspace{2mm}
+% \begin{innerlist}\itemsep0.25em
+%     \item[$\diamondsuit$] IEEE/ACM Transactions on Networking
+%     \item[$\diamondsuit$] IEEE Transactions on Parallel and Distributed Systems
+%     \item[$\diamondsuit$] IEEE Journal on Selected Areas in Communication 
+%     \item[$\diamondsuit$] IEEE Transactions on Cloud Computing
+%     \item[$\diamondsuit$] IEEE Transactions on Mobile Computing
+%     \item[$\diamondsuit$] IEEE Transactions on Knowledge and Data Engineering
+%     \item[$\diamondsuit$] IEEE Transactions on Information Forensics \& Security
+%     \item[$\diamondsuit$] IEEE Transactions on Big Data
+%     \item[$\diamondsuit$] IEEE Transactions on Services Computing
+%     \item[$\diamondsuit$] IEEE Communications Letters
+%     \item[$\diamondsuit$] Springer Multimedia Systems
+%     \item[$\diamondsuit$] Springer Journal of Cloud Computing: Advances, Systems and Applications
+%     \item[$\diamondsuit$] Springer Peer-to-Peer Networking and Applications
+% \end{innerlist}
+
+% \vspace{4mm}
+
+% \textbf{Reviewer for Conference Manuscript Submissions}
+% \vspace{2mm}
+% \begin{innerlist}
+%     \item[]
+% IEEE INFOCOM,
+% IEEE ICNP,
+% IEEE ICDCS,
+% IEEE GLOBECOM.
+% \end{innerlist}
+
+
+
+\section{Skills} 
+\vspace{2mm}
+
+\NumTabs{3}
+\begin{inparaenum}[$\diamondsuit$]
+\item Python
+\tab\item Java, Scala
+\tab\item Keras
+\tab\item TensorFlow
+\tab\item MXNet
+\tab\item Spark
+\tab\item Hadoop   
+\end{inparaenum}
+
+
+\section{References} 
+\textbf{Wei Wang}, Assistant Professor \\
+Hong Kong University of Science and Technology \\
+Room 3524, CSE Department, HKUST \\
+Clear Water Bay, Kowloon, Hong Kong \\ 
+\textit{Phone:} +852--2358--6972 \\
+\textit{Email:} \href{mailto:weiwa@cse.ust.hk}{weiwa@cse.ust.hk} \\
+\textit{Web:} \href{https://www.cse.ust.hk/~weiwa/}{https://www.cse.ust.hk/~weiwa/} \\ 
+
+\textbf{Feng Yan}, Assistant Professor \\
+University of Nevada, Reno \\
+SEM 233, CSE Department
+Reno, NV 89557\\ 
+\textit{Phone:} +1--775--784--6448 \\
+\textit{Email:} \href{mailto:fyan@unr.edu}{fyan@unr.edu} \\
+\textit{Web:} \href{https://wolfweb.unr.edu/~fyan/}{https://wolfweb.unr.edu/~fyan/} \\ 
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
