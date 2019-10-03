@@ -147,12 +147,36 @@
   </url>
   
   <url>
+    <loc>/publication_types/2/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/courses/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/jun-zhang/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/khaled-ben-letaief/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/lrc/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/yinghao-yu/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
