@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Large machine learning models are typically trained in parallel and distributed environments. The model parameters are iteratively refined by multiple worker nodes in parallel, each processing a subset of the training data. In practice, the training is usually conducted in an asynchronous parallel manner, where workers can proceed to the next iteration before receiving the latest model parameters. While this maximizes the rate of updates, the price paid is compromised training quality as the computation is usually performed using stale model parameters. To address this problem, we propose a new scheme, termed speculative synchronization. Our scheme allows workers to speculate about the recent parameter updates from others on the fly, and if necessary, the workers abort the ongoing computation, pull fresher parameters, and start over to improve the quality of training. We design an effective heuristic algorithm to judiciously determine when to restart training iterations with fresher parameters by quantifying the gain and loss. We implement our scheme in MXNet—a popular machine learning framework—and demonstrate its effectiveness through cluster deployment atop Amazon EC2. Experimental results show that speculative synchronization achieves up to 3x speedup over the asynchronous parallel scheme in many machine learning applications, with little additional communication overhead.">
+  <meta name="description" content="To be updated">
 
   
-  <link rel="alternate" hreflang="en-us" href="/publication/spec-sync/">
+  <link rel="alternate" hreflang="en-us" href="/publication/heterbo/">
 
   
 
@@ -96,7 +96,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/publication/spec-sync/">
+  <link rel="canonical" href="/publication/heterbo/">
 
   
   
@@ -107,26 +107,26 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Chengliang Zhang - aspiring scientist">
-  <meta property="og:url" content="/publication/spec-sync/">
-  <meta property="og:title" content="Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning | Chengliang Zhang - aspiring scientist">
-  <meta property="og:description" content="Large machine learning models are typically trained in parallel and distributed environments. The model parameters are iteratively refined by multiple worker nodes in parallel, each processing a subset of the training data. In practice, the training is usually conducted in an asynchronous parallel manner, where workers can proceed to the next iteration before receiving the latest model parameters. While this maximizes the rate of updates, the price paid is compromised training quality as the computation is usually performed using stale model parameters. To address this problem, we propose a new scheme, termed speculative synchronization. Our scheme allows workers to speculate about the recent parameter updates from others on the fly, and if necessary, the workers abort the ongoing computation, pull fresher parameters, and start over to improve the quality of training. We design an effective heuristic algorithm to judiciously determine when to restart training iterations with fresher parameters by quantifying the gain and loss. We implement our scheme in MXNet—a popular machine learning framework—and demonstrate its effectiveness through cluster deployment atop Amazon EC2. Experimental results show that speculative synchronization achieves up to 3x speedup over the asynchronous parallel scheme in many machine learning applications, with little additional communication overhead."><meta property="og:image" content="/publication/spec-sync/featured.jpg">
+  <meta property="og:url" content="/publication/heterbo/">
+  <meta property="og:title" content="Not All Explorations Are Equal: Harnessing Heterogeneous Profiling Cost for Efficient MLaaS Training | Chengliang Zhang - aspiring scientist">
+  <meta property="og:description" content="To be updated"><meta property="og:image" content="/publication/heterbo/featured.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-01-01T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2017-01-01T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2018-07-12T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2020-05-12T00:00:00&#43;00:00">
   
-
-  
-
 
   
 
 
+  
 
 
 
-  <title>Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning | Chengliang Zhang - aspiring scientist</title>
+
+
+  <title>Not All Explorations Are Equal: Harnessing Heterogeneous Profiling Cost for Efficient MLaaS Training | Chengliang Zhang - aspiring scientist</title>
 
 </head>
 
@@ -398,8 +398,8 @@
 
 
 <div class="article-header d-xl-none">
-  <div class="featured-image" style="background-image: url('/publication/spec-sync/featured_hu068a20dcf4ad0324db2ca96cd1a22816_56913_800x0_resize_q90_lanczos.jpg');"></div>
-  <span class="article-header-caption">speculative synchronization</span>
+  <div class="featured-image" style="background-image: url('/publication/heterbo/featured_hu49b520efb2e95a6ee537b02ec5b1b836_211754_800x0_resize_q90_lanczos.jpg');"></div>
+  <span class="article-header-caption">HeteroBO</span>
 </div>
 
 
@@ -407,7 +407,7 @@
   <div class="row">
     <div class="col-6">
       <div class="split-header-content">
-        <h1 itemprop="name">Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning</h1>
+        <h1 itemprop="name">Not All Explorations Are Equal: Harnessing Heterogeneous Profiling Cost for Efficient MLaaS Training</h1>
 
         
 
@@ -415,8 +415,8 @@
 
 
 
-<meta content="2018-07-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2018-07-12 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2020-05-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-05-12 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -429,7 +429,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/chengliang-zhang/">Chengliang Zhang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/minchen-yu/">Minchen Yu</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/wei-wang/">Wei Wang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/feng-yan/">Feng Yan</a></span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/jun-yi/">Jun Yi</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/chengliang-zhang/">Chengliang Zhang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/wei-wang/">Wei Wang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/cheng-li/">Cheng Li</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/feng-yan/">Feng Yan</a></span>
 
   </div>
   
@@ -441,7 +441,7 @@
     
       
     
-    <time>July 2018</time>
+    <time>May 2020</time>
   </span>
   
 
@@ -488,33 +488,17 @@
 
 
   
-    
-  
 
 
-
-<a class="btn btn-outline-primary my-1 mr-1" href="/specsync-icdcs18.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
 
 
 
 <button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
-        data-filename="/publication/spec-sync/cite.bib">
+        data-filename="/publication/heterbo/cite.bib">
   Cite
 </button>
 
 
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/All-less/mxnet-speculative-synchronization" target="_blank" rel="noopener">
-  Code
-</a>
-
-
-
 
 
 
@@ -524,9 +508,11 @@
   
     
   
-<a class="btn btn-outline-primary my-1 mr-1" href="/ICDCS_pre_Chengliang.pdf" target="_blank" rel="noopener">
-  Slides
+<a class="btn btn-outline-primary my-1 mr-1" href="/ATC_poster.pdf" target="_blank" rel="noopener">
+  Poster
 </a>
+
+
 
 
 
@@ -550,7 +536,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/publication/spec-sync/&amp;text=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/publication/heterbo/&amp;text=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -563,7 +549,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/publication/spec-sync/&amp;t=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/publication/heterbo/&amp;t=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -576,7 +562,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning&amp;body=/publication/spec-sync/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training&amp;body=/publication/heterbo/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -589,7 +575,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/publication/spec-sync/&amp;title=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/publication/heterbo/&amp;title=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -602,7 +588,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning%20/publication/spec-sync/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training%20/publication/heterbo/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -615,7 +601,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/publication/spec-sync/&amp;title=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/publication/heterbo/&amp;title=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -628,15 +614,15 @@
     </div>
     <div class="col-6">
       <div class="split-header-image">
-        <img src="/publication/spec-sync/featured_hu068a20dcf4ad0324db2ca96cd1a22816_56913_680x500_fill_q90_lanczos_smart1.jpg" itemprop="image" alt="">
-        <span class="article-header-caption">speculative synchronization</span>
+        <img src="/publication/heterbo/featured_hu49b520efb2e95a6ee537b02ec5b1b836_211754_680x500_fill_q90_lanczos_smart1.jpg" itemprop="image" alt="">
+        <span class="article-header-caption">HeteroBO</span>
       </div>
     </div>
   </div>
 </div>
 
 <div class="article-container d-xl-none">
-  <h1 itemprop="name">Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning</h1>
+  <h1 itemprop="name">Not All Explorations Are Equal: Harnessing Heterogeneous Profiling Cost for Efficient MLaaS Training</h1>
 
   
 
@@ -644,8 +630,8 @@
 
 
 
-<meta content="2018-07-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2018-07-12 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2020-05-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-05-12 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -658,7 +644,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/chengliang-zhang/">Chengliang Zhang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/minchen-yu/">Minchen Yu</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/wei-wang/">Wei Wang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/feng-yan/">Feng Yan</a></span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/jun-yi/">Jun Yi</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/chengliang-zhang/">Chengliang Zhang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/wei-wang/">Wei Wang</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/cheng-li/">Cheng Li</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/feng-yan/">Feng Yan</a></span>
 
   </div>
   
@@ -670,7 +656,7 @@
     
       
     
-    <time>July 2018</time>
+    <time>May 2020</time>
   </span>
   
 
@@ -697,7 +683,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/publication/spec-sync/&amp;text=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/publication/heterbo/&amp;text=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -710,7 +696,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/publication/spec-sync/&amp;t=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/publication/heterbo/&amp;t=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -723,7 +709,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning&amp;body=/publication/spec-sync/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training&amp;body=/publication/heterbo/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -736,7 +722,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/publication/spec-sync/&amp;title=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/publication/heterbo/&amp;title=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -749,7 +735,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning%20/publication/spec-sync/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training%20/publication/heterbo/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -762,7 +748,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/publication/spec-sync/&amp;title=Stay%20Fresh:%20Speculative%20Synchronization%20for%20Fast%20Distributed%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/publication/heterbo/&amp;title=Not%20All%20Explorations%20Are%20Equal:%20Harnessing%20Heterogeneous%20Profiling%20Cost%20for%20Efficient%20MLaaS%20Training" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -803,33 +789,17 @@
 
 
   
-    
-  
 
 
-
-<a class="btn btn-outline-primary my-1 mr-1" href="/specsync-icdcs18.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
 
 
 
 <button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
-        data-filename="/publication/spec-sync/cite.bib">
+        data-filename="/publication/heterbo/cite.bib">
   Cite
 </button>
 
 
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/All-less/mxnet-speculative-synchronization" target="_blank" rel="noopener">
-  Code
-</a>
-
-
-
 
 
 
@@ -839,9 +809,11 @@
   
     
   
-<a class="btn btn-outline-primary my-1 mr-1" href="/ICDCS_pre_Chengliang.pdf" target="_blank" rel="noopener">
-  Slides
+<a class="btn btn-outline-primary my-1 mr-1" href="/ATC_poster.pdf" target="_blank" rel="noopener">
+  Poster
 </a>
+
+
 
 
 
@@ -860,7 +832,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Large machine learning models are typically trained in parallel and distributed environments. The model parameters are iteratively refined by multiple worker nodes in parallel, each processing a subset of the training data. In practice, the training is usually conducted in an asynchronous parallel manner, where workers can proceed to the next iteration before receiving the latest model parameters. While this maximizes the rate of updates, the price paid is compromised training quality as the computation is usually performed using stale model parameters. To address this problem, we propose a new scheme, termed speculative synchronization. Our scheme allows workers to speculate about the recent parameter updates from others on the fly, and if necessary, the workers abort the ongoing computation, pull fresher parameters, and start over to improve the quality of training. We design an effective heuristic algorithm to judiciously determine when to restart training iterations with fresher parameters by quantifying the gain and loss. We implement our scheme in MXNet—a popular machine learning framework—and demonstrate its effectiveness through cluster deployment atop Amazon EC2. Experimental results show that speculative synchronization achieves up to 3x speedup over the asynchronous parallel scheme in many machine learning applications, with little additional communication overhead.</p>
+    <p class="pub-abstract" itemprop="text">To be updated</p>
     
 
     
@@ -890,7 +862,7 @@
       <div class="col-md-10">
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">In <em>the 38th IEEE International Conference on Distributed Computing Systems (ICDCS’18, Research Track)</em></div>
+          <div class="col-12 col-md-9">In <em>the 2019 USENIX Annual Technical Conference (ATC'19)</em></div>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -938,7 +910,7 @@
     
 
     <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="/authors/chengliang-zhang/"></a></h5>
+      <h5 class="card-title" itemprop="name"><a href="/authors/jun-yi/"></a></h5>
       
       
       <ul class="network-icon" aria-hidden="true">
