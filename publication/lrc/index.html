@@ -112,8 +112,9 @@
   <meta property="og:description" content="Memory caches are being used aggressively in today’s data analytics systems such as Spark, Tez, and Piccolo. The significant performance impact of caches and their limited sizes call for efficient cache management in data analytics clusters. However, prevalent data analytics systems employ rather simple cache management policies—notably Least Recently Used (LRU) and Least Frequently Used (LFU)—that are oblivious to the application semantics of data dependency, expressed as directed acyclic graphs (DAGs). Without this knowledge, cache management can, at best, be performed by “guessing” the future data access patterns based on history, which frequently results in inefficient, erroneous caching with a low hit rate and a long response time. Worse still, the lack of data dependency knowledge makes it impossible to retain the all-or-nothing cache property of cluster applications, in that a compute task cannot be sped up unless all the dependent data has been kept in the main memory. In this paper, we propose a novel cache replacement policy, named Least Reference Count (LRC), which exploits the application’s data dependency information to optimize the cache management. LRC keeps track of the reference count of each data block, defined as the number of dependent child blocks that have not been computed yet, and always evicts the block with the smallest reference count. Furthermore, we incorporate the all-or-nothing requirement into LRC by coordinately managing the reference counts of all the input data blocks for the same computation. We demonstrate the efficacy of LRC through both empirical analysis and cluster deployments against popular benchmarking workloads. Our Spark implementation shows that, the proposed policies well address the all-or-nothing requirement and significantly improve the cache performance. Compared with LRU and a recently proposed caching policy called MEMTUNE, LRC improves the caching performance of typical workloads in production clusters by 22% and 284%, respectively."><meta property="og:image" content="/publication/lrc/featured.png">
   <meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2019-09-01T00:00:00&#43;00:00">
   
-  
+  <meta property="article:modified_time" content="2019-09-01T00:00:00&#43;00:00">
   
 
   
@@ -414,8 +415,8 @@
 
 
 
-<meta content="" itemprop="datePublished">
-<meta content="" itemprop="dateModified">
+<meta content="2019-09-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-01 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -440,7 +441,7 @@
     
       
     
-    <time>January 0001</time>
+    <time>September 2019</time>
   </span>
   
 
@@ -492,7 +493,7 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://ieeexplore.ieee.org/document/8854200" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="/yu-tcc19.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
@@ -631,8 +632,8 @@
 
 
 
-<meta content="" itemprop="datePublished">
-<meta content="" itemprop="dateModified">
+<meta content="2019-09-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-01 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -657,7 +658,7 @@
     
       
     
-    <time>January 0001</time>
+    <time>September 2019</time>
   </span>
   
 
@@ -795,7 +796,7 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://ieeexplore.ieee.org/document/8854200" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="/yu-tcc19.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 

@@ -6,10 +6,19 @@
     <description>Recent content in Spark on Chengliang Zhang - aspiring scientist</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/tags/spark/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Towards Dependency-Aware Cache Management for Data Analytics Applications</title>
+      <link>/publication/lrc/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/lrc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>LRC: Dependency-Aware Cache Management for Data Analytics Clusters</title>
@@ -17,15 +26,6 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>/project/spark-cache-management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Towards Dependency-Aware Cache Management for Data Analytics Applications</title>
-      <link>/publication/lrc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/lrc/</guid>
       <description></description>
     </item>
     
