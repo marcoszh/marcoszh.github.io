@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Don't like 10pt? Try 11pt or 12pt
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 % This is a helpful package that puts math inside length specifications
 \usepackage{calc}
@@ -66,7 +66,7 @@
 %% Use these lines for A4-sized paper
 \usepackage[paper=letterpaper,
             %includefoot, % Uncomment to put page number above margin
-            marginparwidth=30.5mm,    % Length of section titles
+            marginparwidth=25.5mm,    % Length of section titles
             marginparsep=1.5mm,       % Space between titles and text
             margin=15mm,              % 25mm margins
             includemp]{geometry}
@@ -183,19 +183,11 @@
 \newlength{\rcollength}\setlength{\rcollength}{2.4in}%
 %
 \begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
-	 Ph.D Candidate & \emph{Office}: Room CYT 3007 \\
-     Dept. of Computer Science \& Engineering & \emph{Phone}:  +852--6216--2287\\
-	 Hong Kong University of Science and Technology  & \emph{Email}: \href{mailto: czhangbn@cse.ust.hk}{czhangbn@cse.ust.hk} \\
-     Clear Water Bay, Hong Kong  &  \emph{Web}: \href{https://marcoszh.github.io/}{https://marcoszh.github.io/} \\
+	 Ph.D Candidate & \emph{Phone}:  +852--6216--2287 \\
+     Dept. of Computer Science \& Engineering & \emph{Email}: \href{mailto: czhangbn@cse.ust.hk}{czhangbn@cse.ust.hk}\\
+	 Hong Kong University of Science and Technology  & \emph{Web}: \href{https://marcoszh.github.io/}{https://marcoszh.github.io/} \\
+%      Clear Water Bay, Hong Kong  &  \emph{Web}: \href{https://marcoszh.github.io/}{https://marcoszh.github.io/} \\
 \end{tabular}
-
-% \section{Personal Information}
-% \newlength{\shortcollength}\setlength{\shortcollength}{4.5in}%
-% %
-% \begin{tabular}[t]{@{}p{\textwidth-\shortcollength}p{\shortcollength}}
-%      \emph{Citizenship} & Chinese \\
-%      \emph{Permanent Residency} &  Canadian
-% \end{tabular}
 
 \section{Research Interests}
 My interests cover \textbf{big data analytics systems} and \textbf{cloud computing}, with a special focus on \textbf{machine learning systems}. I enjoy identifying system design, performance, and privacy issues in large-scale ML systems for both training and inference, and searching for general and efficient solutions.
@@ -203,7 +195,7 @@ My interests cover \textbf{big data analytics systems} and \textbf{cloud computi
 \section{Education}
 \textbf{Hong Kong University of Science and Technology}, Hong Kong SAR\\
 {\em Department of Computer Science and Engineering}\\[0.4em]
-        \mbox{}$\diamondsuit$ \textbf{Ph.D.} Computer Science and Engineering \hfill September 2016 - present\\
+        \mbox{}$\diamondsuit$ \textbf{Ph.D.} Computer Science and Engineering \hfill September 2016 - March 2021\\
         \mbox{}\hspace{6mm}\hspace{6mm}$\diamondsuit$ \emph{Supervisor:} \href{https://www.cse.ust.hk/~weiwa/}{Wei Wang}\\
         \mbox{}\hspace{6mm}\hspace{6mm}$\diamondsuit$ \href{https://cerg1.ugc.edu.hk/hkpfs/index.html}{Hong Kong PhD Fellowship} recipient: prestigious and highly selective\\[-0.4em]
 
@@ -212,42 +204,35 @@ My interests cover \textbf{big data analytics systems} and \textbf{cloud computi
         \mbox{}$\diamondsuit$ \textbf{B.Eng.} Software Engineering \hfill September 2012 - June 2016\\
         \mbox{}\hspace{6mm}\hspace{6mm}$\diamondsuit$ \emph{Honors:} National Scholarship (Top 2\%), Fuji Xerox Scholarship
 
-% % \vspace{-.2in}
-% \section{Professional Experience}
-% \textbf{Hong Kong University of Science and Technology}, Clear Water Bay, Kowloon, Hong Kong\\
-% Department of Computer Science and Engineering\\[-0.6em]
-
-% \emph{Assistant Professor (tenure-track)} \hfill September 2015 -- Present\\
-
-% \textbf{University of Toronto}, Toronto, Ontario, Canada\\
-% Department of Electrical and Computer Engineering\\[-0.6em]
-
-% \emph{Research/Teaching Assistant} \hfill September 2010 -- August 2015\\
-
-% \textbf{Microsoft Server and Tools Business}, Shanghai, China\\[-0.6em]
-
-% \emph{Software Development Engineer (intern)}\\
-% \mbox{}\hspace{6mm}$\diamondsuit$ Placement and routing algorithms for Microsoft WorkFlow 4.0  \hfill March -- June, 2010\\
-% \mbox{}\hspace{6mm}$\diamondsuit$ Cloud identity service development for Microsoft BizTalk  \hfill June -- September, 2008\\
-
-% \textbf{Microsoft Research Asia}, Beijing, China\\[-0.6em]
-
-% \emph{Research Assistant} \hfill March -- June 2007
 
 \section{Publications}
 
-\uline{Chengliang Zhang}, {Suyi Li}, {Junzhe Xia}, {Wei Wang}, Feng Yan, {Yang Liu} ``\href{https://marcoszh.github.io/publication/batchcrypt/}{BatchCrypt: Efficient Homomorphic Encryption for Cross-Silo Federated Learning},'' in the {\em Proceedings of USENIX Annual Technical Conference (ATC'20)}, Boston, MA, July 2020 (top venue acc. \href{http://csrankings.org/}{CSRankings}).\\
+\textbf{Conference}\hfill $\dagger$: top venue acc. \href{http://csrankings.org/}{CSRankings}
 
-{Jun Yi}, \uline{Chengliang Zhang}, {Wei Wang}, Cheng Li, Feng Yan, ``\href{https://marcoszh.github.io/publication/heterbo/}{Not All Explorations Are Equal: Harnessing Heterogeneous Profiling Cost for Efficient MLaaS Training},'' in the {\em Proceedings of IEEE International Parallel and Distributed Processing Symposium (IPDPS'20)}, New Orleans, LA, May 2020.\\
+% \vspace{2mm}
+\uline{Chengliang Zhang}, {Suyi Li}, {Junzhe Xia}, {Wei Wang}, Feng Yan, {Yang Liu} ``\href{https://marcoszh.github.io/publication/batchcrypt/}{BatchCrypt: Efficient Homomorphic Encryption for Cross-Silo Federated Learning},'' in the {\em Proceedings of USENIX Annual Technical Conference (ATC'20)}\textsuperscript{$\dagger$}, Boston, MA, July 2020.\\
 
-\uline{Chengliang Zhang}, {Minchen Yu}, {Wei Wang}, Feng Yan, ``\href{https://marcoszh.github.io/publication/mark/}{MArk: Exploiting Cloud Services for Cost-Effective, SLO-Aware Machine Learning Inference Serving},'' in the {\em Proceedings of USENIX Annual Technical Conference (ATC'19)}, Renton, WA, July 2019 (top venue acc. \href{http://csrankings.org/}{CSRankings}).\\
+\vspace{-3mm}
+{Jun Yi}, \uline{Chengliang Zhang}, {Wei Wang}, {Cheng Li}, {Feng Yan}, ``\href{https://marcoszh.github.io/publication/heterbo/}{Not All Explorations Are Equal: Harnessing Heterogeneous Profiling Cost for Efficient MLaaS Training},'' in the {\em Proceedings of IEEE International Parallel and Distributed Processing Symposium (IPDPS'20)}, New Orleans, LA, May 2020.\\
 
+\vspace{-3mm}
+\uline{Chengliang Zhang}, {Minchen Yu}, {Wei Wang}, {Feng Yan}, ``\href{https://marcoszh.github.io/publication/mark/}{MArk: Exploiting Cloud Services for Cost-Effective, SLO-Aware Machine Learning Inference Serving},'' in the {\em Proceedings of USENIX Annual Technical Conference (ATC'19)}\textsuperscript{$\dagger$}, Renton, WA, July 2019.\\
 
-\uline{Chengliang Zhang}, {Huangshi Tian}, {Wei Wang}, Feng Yan, ``\href{https://marcoszh.github.io/publication/spec-sync/}{Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning},'' in the {\em Proceedings of IEEE International Conference on Distributed Computing Systems (ICDCS'18)}, Vienna, Austria.\\
+\vspace{-3mm}
+\uline{Chengliang Zhang}, {Huangshi Tian}, {Wei Wang}, {Feng Yan}, ``\href{https://marcoszh.github.io/publication/spec-sync/}{Stay Fresh: Speculative Synchronization for Fast Distributed Machine Learning},'' in the {\em Proceedings of IEEE International Conference on Distributed Computing Systems (ICDCS'18)}, Vienna, Austria.\\
 
-\uline{Chengliang Zhang}, {Minchen Yu}, {Wei Wang}, Feng Yan, ``\href{https://marcoszh.github.io/publication/mark-journal/}{Enabling Cost-Effective, SLO-Aware Machine Learning Inference Serving on Public Cloud,}'' in the {\em IEEE Transactions on Cloud Computing}.\\
+\vspace{-2mm}
+\textbf{Journal}
 
+\uline{Chengliang Zhang}, {Minchen Yu}, {Wei Wang}, {Feng Yan}, ``\href{https://marcoszh.github.io/publication/mark-journal/}{Enabling Cost-Effective, SLO-Aware Machine Learning Inference Serving on Public Cloud,}'' in the {\em IEEE Transactions on Cloud Computing}.\\
+
+\vspace{-3mm}
 {Yinghao Yu}, \uline{Chengliang Zhang}, {Wei Wang}, {Jun Zhang}, {Khaled Letaief}, ``\href{https://marcoszh.github.io/publication/lrc/}{Towards Dependency-Aware Cache Management for Data Analytics Applications},'' in the {\em IEEE Transactions on Cloud Computing}.\\
+
+\vspace{-2mm}
+\textbf{Under Review}
+
+\uline{Chengliang Zhang}, {Junzhe Xia}, {Baichen Yang}, {Huancheng Puyang}, {Wei Wang}, {Ruichuan Chen}, {Istemi Ekin Akkus}, {Paarijaat Aditya}, {Feng Yan}, ``\href{https://marcoszh.github.io/publication/}{Citadel: Protect Data Privacy and Model Confidentiality for collaborative Learning with SGX}.\\
 
 % \textbf{Preprints}\\
 
@@ -256,41 +241,47 @@ My interests cover \textbf{big data analytics systems} and \textbf{cloud computi
 \section{Research Experience}
 
 \textbf{Research Scientist Intern @ Bell Labs Germany}
-\vspace{2pt}
+% \vspace{2pt}
 \begin{compactenum}[-]
-\item Confidential Collaborative Machine Learning
-\item Protect both Data Privacy and Model Privacy
-\item Trusted Execution Environment
+\item Project owner and implementation lead
+\item Designed and realized a distributed system for confidential collaborative machine learning
+\item Aspired to protect both data privacy and model privacy
+\item Utilized Trusted Execution Environment
 \end{compactenum}
 \vspace{5pt}
 
 \textbf{Fast Secure Federated Learning System}
-\vspace{2pt}
+% \vspace{2pt}
 \begin{compactenum}[-]
-\item Inter-enterprise federated learning with Homomorphic Encryption
-\item Accelerate training and inference of Secure Federated Learning
-\item Mitigate encryption and communication overhead
+\item Project owner and implementation lead
+\item Proposed and implemented a method to speedup inter-enterprise federated learning
+\item Accelerated Homomorphic Encryption for federated learning training
+\item Mitigated encryption and network overhead by quantizing and batching intermediate results
 \end{compactenum}
 \vspace{5pt}
 
 % I am currently working on accelerating the training and inference process of secure federated learning. We partner with a large commercial bank, and focus on enabling inter-enterprise federated learning with the help of Homomorphic Encryption. Specifically, I am working on how to mitigate the encryption and communication overhead. \\[-0.4em]
 
 \textbf{MArk: ML Serving on Public Cloud}
-\vspace{2pt}
+% \vspace{2pt}
 \begin{compactenum}[-]
-\item Serve machine learning inference on public cloud, cost-effectively and SLO-aware
-\item Characterization of ML serving and its performance cloud services and hardware accelerators like GPU and TPU
-\item Combine FaaS and IaaS to reduce over-provisioning
+\item Project owner and implementation lead
+\item Designed a large-scale machine learning inference serving system on public cloud
+\item Aspired to be both cost-effectively and SLO-aware
+\item Characterized ML serving and its performance on cloud services and hardware accelerators
+\item Combined FaaS and IaaS to reduce over-provisioning
 \end{compactenum}
 \vspace{5pt}
 % We aspired to serve machine learning models on public cloud with both SLO compliance and cost-effectiveness. We first characterized ML serving and its performance on diverse cloud services, and then designed MArk based on our insights. MArk uses predictive autoscaling to maintain high utilization, and eliminates over-provisioning by utilizing flexible, yet expensive FaaS. MArk further brings down the cost by adopting ML accelerators judiciously. \\[-0.4em]
 
 \textbf{Speculative Synchronization}
-\vspace{2pt}
+% \vspace{2pt}
 \begin{compactenum}[-]
-\item Distributed data parallel training
-\item Relaxed consistency can increase throughput but hurt update quality
-\item Re-synchronize if the parameter copy is too stale to produce beneficial updates
+\item Project owner and implementation lead
+\item Aimed at distributed data parallel training with relaxed consistency
+\item Actively improved consistency by re-synchronization if deemed beneficial
+% \item Relaxed consistency can increase throughput but hurt update quality
+% \item Re-synchronize if the parameter copy is too stale to produce beneficial updates
 \end{compactenum}
 % \vspace{5pt}
 % Asynchronous parallel can improve distributed ML training's throughput. However, the introduced inconsistency leads to low quality updates. We proposed Speculative Synchronization to exploit the trade-off between training throughput and update quality, which allows a worker to abort the current computation and synchronize, if it is confident that the benefits of fresher parameter outweight the loss of completed computation.
@@ -487,11 +478,20 @@ Room 3524, CSE Department, Hong Kong University of Science and Technology \\
 \textit{Email:} \href{mailto:weiwa@cse.ust.hk}{weiwa@cse.ust.hk} \\
 \textit{Web:} \url{https://www.cse.ust.hk/~weiwa/} \\ 
 
+\vspace{-3mm}
 \textbf{Feng Yan}, Assistant Professor \\
 SEM 233, CSE Department, University of Nevada, Reno \\
 \textit{Phone:} +1--775--784--6448  
 \textit{Email:} \href{mailto:fyan@unr.edu}{fyan@unr.edu} \\
 \textit{Web:} \url{https://www.cse.unr.edu/~fyan/} \\ 
+
+\vspace{-3mm}
+\textbf{Ruichuan Chen}, Distinguished Member of Technical Staff \\
+Nokia Bell Labs \\
+Lorenzstrasse 10, 70435 Stuttgart, Germany \\
+% \textit{Phone:} +1--775--784--6448  
+\textit{Email:} \href{mailto:ruichuan.chen@nokia-bell-labs.com}{ruichuan.chen@nokia-bell-labs.com} \\
+\textit{Web:} \url{https://www.ruichuan.org/} \\ 
 
 \end{document}
 
