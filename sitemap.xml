@@ -19,26 +19,111 @@
   
   <url>
     <loc>/publication_types/1/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/7/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/batchcrypt/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <loc>/authors/baichen-yang/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/chengliang-zhang/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/citadel/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/data-privacy/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/feng-yan/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/huangcheng-puyang/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/intel-sgx/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/istemi-ekin-akkus/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/junzhe-xia/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/paarijaat-aditya/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/ruichuan-chen/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/thesis/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/wei-wang/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/batchcrypt/</loc>
     <lastmod>2020-07-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,42 +133,7 @@
   </url>
   
   <url>
-    <loc>/authors/feng-yan/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/junzhe-xia/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/machine-learning/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/authors/suyi-li/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/wei-wang/</loc>
     <lastmod>2020-07-12T00:00:00+00:00</lastmod>
   </url>
   

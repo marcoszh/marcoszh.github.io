@@ -6,10 +6,19 @@
     <description>Recent content in 1 on Chengliang Zhang - aspiring scientist</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Citadel: Protecting Data Privacy and Model Confidentiality for Collaborative Learning</title>
+      <link>/publication/citadel/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/citadel/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>BatchCrypt: Efficient Homomorphic Encryption for Cross-Silo Federated Learning</title>
